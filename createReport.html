@@ -5,13 +5,36 @@
 <meta charset="utf-8">
 <title>Create Report</title>
 
-<link real="stylesheet" href="css/style.css"></link>
+<link rel="stylesheet" href="css/style.css"/>
 
 </head>
 
 <body>
 
-<h1>Create New Report: <span class="parkname">{Park Name}</span></h1>
+    <div class="topbar">
+        <h1>Create New Report: <span class="parkname">{Park Name}</span></h1>
+    </div>
+    
+    <form> 
+    Name: <input type="text" name="name" />
+    <br />
+    Date: <input type="text" name="date" />
+    <br />
+    Possible conversion: <input type="checkbox" name="conversion" />
+    <br />
+    Data correction: <input type="checkbox" name="dataCorrection" />
+    <br />
+    Maintenance issue: <input type="checkbox" name="Maintenaceissue" />
+    <br />
+    Public access issue: <input type="checkbox" name="Publicaccess" />
+    <br />
+    Notes: 
+    <br/>
+    <input type="text" name="name" />
+    <br/>
+        <button>Submit</button>
+    </form>
+
 
 </body>
 
@@ -19,6 +42,6 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script src="js/main.js"></script>
 
 </html>

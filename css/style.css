@@ -29,3 +29,35 @@ form {
     height: 800px;
     width :100%;
 }
+
+th {
+	background-color: rgb(85, 178, 61);
+}
+
+td, th {
+	border-width: 1px;
+    border-color: black;
+    border-style: solid;
+	text-align: center;
+	
+	padding: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	
+}
+
+.leaflet-popup-content {
+	margin: 0px;
+}
+
+.leaflet-popup-content-wrapper {
+	padding: 0px;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+	color: black;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+	color: red;
+}

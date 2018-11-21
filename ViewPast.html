@@ -6,14 +6,41 @@
 <title>View Past Inspections</title>
 
 <link rel='shortcut icon' type='image/x-icon' href='img/Arkansas.ico' />
-
-<link real="stylesheet" href="css/style.css"></link>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css"></link>
 
 </head>
 
 <body>
 
-<h1>Past Reports: <span class="parkname">{Park Name}</span></h1>
+	<div class="topbar">
+        <h1>View Past Reports: <span class="parkname">{Park Name}</span></h1>
+	</div>
+	
+	<div id="accordion">
+		<h3> 11/4/2017 </h3>
+		<div class="past-report-content">
+		Name: <input type="text" name="name" />
+		<br />
+		Date: <input type="text" name="date" />
+		<br />
+		Possible conversion: <input type="checkbox" name="conversion" />
+		<br />
+		Data correction: <input type="checkbox" name="dataCorrection" />
+		<br />
+		Maintenance issue: <input type="checkbox" name="Maintenaceissue" />
+		<br />
+		Public access issue: <input type="checkbox" name="Publicaccess" />
+		<br />
+		Notes: 
+		<br/>
+		<input type="text" name="description" />
+		</div>
+		
+		<h3> Section 2 </h3>
+		<div class="past-report-content"> DIV content </div>
+	
+	</div>
 
 </body>
 
@@ -21,6 +48,13 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+
 
 </html>

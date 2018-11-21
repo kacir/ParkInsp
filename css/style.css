@@ -1,6 +1,9 @@
+
+/*content that applys to all pages*/
 h1 {
     text-align: center;
     margin: 0px;
+	margin-top: 5px;
     color: white;
 }
 .topbar {
@@ -20,11 +23,15 @@ body {
     margin: 0px;
 }
 
+
+
+
 form {
     margin-left: auto;
     margin-right: auto;
 }
 
+/*content that applys to all index pages only*/
 #map {
     height: 800px;
     width :100%;
@@ -60,4 +67,15 @@ td, th {
 
 .leaflet-container a.leaflet-popup-close-button:hover {
 	color: red;
+}
+
+
+
+/*Content that appies to past reports page only*/
+.past-report-content {
+	background-color: rgb(205, 225, 198);
+}
+
+.ui-state-default{
+	background-color: rgb(205, 225, 198);
 }

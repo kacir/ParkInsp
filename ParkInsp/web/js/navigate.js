@@ -23,3 +23,15 @@ var marker = L.marker([ 34.7517595, -92.329416]).addTo(mymap);
 
 marker.bindPopup("<table> <tr><th><h3>" + parkName + "</h3></th></tr> <tr><td><a href='ViewPast.html?parknum=" + parkNum + "'>View Past Reports</a></td> </tr><tr><td><a href='inspect.html?&parknum=" + parkNum +"'>Inspect</a></td></tr> <tr><td>Drive Here</td></tr> </table>");
 
+
+//line that tests if the servlet service is working correctly
+$.ajax({
+    url: "api/navigate",
+    type: "POST",
+    success: function(data) {
+        console.log(data);
+    },
+    error : function(xhr, status, error) {
+        alert("An AJAX error occured " + status + " Error " + error);
+    }
+});

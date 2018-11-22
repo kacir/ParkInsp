@@ -9,7 +9,18 @@ import java.io.IOException;
 
 @WebServlet("/api/inspect")
 public class Inspect extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public Inspect() {
+        super();
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+
+        String parknum = request.getParameter("parknum");
+        DBUtility dbutil = new DBUtility();
 
     }
 

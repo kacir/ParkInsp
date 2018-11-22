@@ -17,24 +17,38 @@
         <h1>Create New Report: <span class="parkname">{Park Name}</span></h1>
     </div>
     
-    <form> 
-    Name: <input type="text" name="name" />
-    <br />
-    Date: <input type="text" name="date" />
-    <br />
-    Possible conversion: <input type="checkbox" name="conversion" />
-    <br />
-    Data correction: <input type="checkbox" name="dataCorrection" />
-    <br />
-    Maintenance issue: <input type="checkbox" name="Maintenaceissue" />
-    <br />
-    Public access issue: <input type="checkbox" name="Publicaccess" />
-    <br />
-    Notes: 
-    <br/>
-    <input type="text" name="description" />
-    <br/>
-        <button>Submit</button>
+    <form id="create-report-form">
+        <div class="form-pair">
+            <label for="name">Name:</label> 
+            <input type="text" name="name" />
+        </div>
+        <div class="form-pair">
+            <label for="date">Date:</label> 
+            <input type="text" name="date" />
+        </div>
+        <div class="form-pair">
+            <label for="conversion">Possible conversion:</label> 
+            <input type="checkbox" name="conversion" />
+        </div>
+        <div class="form-pair">
+            <label for="dataCorrection">Data correction:</label> 
+            <input type="checkbox" name="dataCorrection" />
+        </div>
+        <div class="form-pair">
+            <label for="Maintenaceissue">Maintenance issue:</label> <input type="checkbox" name="Maintenaceissue" />
+        </div>
+        <div class="form-pair">
+            <label for="Publicaccess">Public access issue:</label> 
+            <input type="checkbox" name="Publicaccess" />
+        </div>
+        <div class="form-pair">
+            <label for="description">Notes: </label>
+            <textarea type="text" name="description" ></textarea>
+        </div>
+        <div class="form-pair">
+            <button>Submit</button>
+        </div>
+    
     </form>
 
 
@@ -44,6 +58,5 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/main.js"></script>
 
 </html>

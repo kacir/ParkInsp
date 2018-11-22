@@ -3,11 +3,12 @@
 h1 {
     text-align: center;
     margin: 0px;
-	margin-top: 5px;
+	padding-top: 5px;
+    padding-bottom: 5px;
     color: white;
 }
 .topbar {
-    height: 50px;
+    /*height: 50px;*/
     background-color: rgb(85, 178, 61);
 
     margin-left: auto;
@@ -21,6 +22,11 @@ h1 {
 body {
     background-color: rgb(205, 225, 198);
     margin: 0px;
+}
+
+button {
+    background-color: rgb(162, 154, 255);
+    font-size: 20px;
 }
 
 
@@ -78,4 +84,36 @@ td, th {
 
 .ui-state-default{
 	background-color: rgb(205, 225, 198);
+}
+
+
+
+
+/*content that appied to the create new report page*/
+label, div {
+    margin:auto;
+    text-align: left;
+}
+
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+#create-report-form {
+    width : 200px;
+}
+
+form div button {
+    width: 100%;
+    height: 75px;
+}
+
+.form-pair {
+    padding: 2px;
+}
+
+form {
+    padding-top: 10px;
 }

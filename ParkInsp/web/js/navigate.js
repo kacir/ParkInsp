@@ -31,7 +31,7 @@ function bindParkPopup (feature, layer) {
 
     //add popup to layer based on properties of feature
     var popupText = "<table> <tr><th><h3>" + feature.properties.currname +
-        "</h3></th></tr> <tr><td><a href='ViewPast.html?parknum=" +
+        "</h3></th></tr> <tr><td><a href='viewpast.html?parknum=" +
         feature.properties.parknum + "'>View Past Reports</a></td> </tr><tr><td><a href='inspect.html?&parknum=" +
         feature.properties.parknum +"'>Inspect</a></td></tr> <tr><td><a target='_blank' href='"+ feature.properties.googlelink + "'>Drive Here</a></td></tr> </table>";
 

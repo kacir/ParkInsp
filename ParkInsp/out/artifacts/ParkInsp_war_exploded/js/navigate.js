@@ -1,5 +1,6 @@
-var mymap = L.map('map').setView([ 34.7517595, -92.329416], 8);
-
+var mymap = L.map('map');
+mymap.setView([ 34.7517595, -92.329416], 8);
+var locateControl = L.control.locate({locateOptions : {maxZoom : 10}}).addTo(mymap);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -31,7 +32,7 @@ function bindParkPopup (feature, layer) {
 
     //add popup to layer based on properties of feature
     var popupText = "<table> <tr><th><h3>" + feature.properties.currname +
-        "</h3></th></tr> <tr><td><a href='ViewPast.html?parknum=" +
+        "</h3></th></tr> <tr><td><a href='viewpast.html?parknum=" +
         feature.properties.parknum + "'>View Past Reports</a></td> </tr><tr><td><a href='inspect.html?&parknum=" +
         feature.properties.parknum +"'>Inspect</a></td></tr> <tr><td><a target='_blank' href='"+ feature.properties.googlelink + "'>Drive Here</a></td></tr> </table>";
 
@@ -89,7 +90,7 @@ function importData (data){
         }
 
 
-    })
+    });
 };
 
 

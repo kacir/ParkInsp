@@ -11,7 +11,13 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin=""/>
-<link rel="stylesheet" href="css/style.css"/>
+
+    <!-- Links needed for the locate control to work properly -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.css" />
+
+    <!-- custom style sheet for this project -->
+    <link rel="stylesheet" href="css/style.css"/>
 
 
 </head>
@@ -24,7 +30,7 @@
     
     <div id="map"></div>
     
-    <a id="viewpastlink" href="ViewPast.html"><button>View Past Reports</button></a>
+    <a id="viewpastlink" href="viewpast.html"><button>View Past Reports</button></a>
     <a id="createReportLink" href="createReport.html"><button>Create Report</button></a>
  
 </body>
@@ -34,6 +40,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="js/inspect.js"></script>
 
 </html>

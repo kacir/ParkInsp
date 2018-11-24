@@ -1,5 +1,6 @@
-var mymap = L.map('map').setView([ 34.7517595, -92.329416], 8);
-
+var mymap = L.map('map');
+mymap.setView([ 34.7517595, -92.329416], 8);
+var locateControl = L.control.locate({locateOptions : {maxZoom : 10}}).addTo(mymap);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -89,7 +90,7 @@ function importData (data){
         }
 
 
-    })
+    });
 };
 
 

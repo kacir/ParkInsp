@@ -1,63 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
-<meta charset="utf-8">
-<title>Create Report</title>
+<head>
+    <meta charset="utf-8">
+    <title>Create Report</title>
 
-<link rel='shortcut icon' type='image/x-icon' href='img/Arkansas.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='img/Arkansas.ico' />
 
-<link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 
 </head>
 
 <body>
 
-    <div class="topbar">
-        <h1>Create New Report: <span class="parkname">{Park Name}</span></h1>
+<div class="topbar">
+    <h1>Create New Report: <span class="parkname">{Park Name}</span></h1>
+</div>
+
+<form id="create-report-form">
+    <div class="form-pair">
+        <label for="name">Name:</label>
+        <input placeholder="Please enter your name" type="text" name="inspector" />
     </div>
-    
-    <form id="create-report-form">
-        <div class="form-pair">
-            <label for="name">Name:</label> 
-            <input type="text" name="name" />
-        </div>
-        <div class="form-pair">
-            <label for="date">Date:</label> 
-            <input type="text" name="date" />
-        </div>
-        <div class="form-pair">
-            <label for="conversion">Possible conversion:</label> 
-            <input type="checkbox" name="conversion" />
-        </div>
-        <div class="form-pair">
-            <label for="dataCorrection">Data correction:</label> 
-            <input type="checkbox" name="dataCorrection" />
-        </div>
-        <div class="form-pair">
-            <label for="Maintenaceissue">Maintenance issue:</label> <input type="checkbox" name="Maintenaceissue" />
-        </div>
-        <div class="form-pair">
-            <label for="Publicaccess">Public access issue:</label> 
-            <input type="checkbox" name="Publicaccess" />
-        </div>
-        <div class="form-pair">
-            <label for="description">Notes: </label>
-            <textarea type="text" name="description" ></textarea>
-        </div>
-        <div class="form-pair">
-            <button>Submit</button>
-        </div>
-    
-    </form>
+    <div class="form-pair">
+        <label for="date">Date:</label>
+        <input placeholder="MM/DD/YYYY" type="text" name="inspdate" />
+    </div>
+    <div class="form-pair">
+        <label for="conversion">Possible conversion:</label>
+        <input type="checkbox" name="conversion" />
+    </div>
+    <div class="form-pair">
+        <label for="dataCorrection">Data correction:</label>
+        <input type="checkbox" name="datacorr" />
+    </div>
+    <div class="form-pair">
+        <label for="Maintenaceissue">Maintenance issue:</label> <input type="checkbox" name="maint" />
+    </div>
+    <div class="form-pair">
+        <label for="Publicaccess">Public access issue:</label>
+        <input type="checkbox" name="public_acc" />
+    </div>
+    <div class="form-pair">
+        <label for="notetype">Note Type:</label>
+        <select name="notetype">
+            <option value="">Select note type</option>
+            <option value="informational">informational</option>
+            <option value="data correction">data correction</option>
+            <option value="maintenance">maintenance</option>
+            <option value="public access">public access</option>
+            <option value="conversion">conversion</option>
+            <option value="other">other</option>
+        </select>
+    </div>
+    <div class="form-pair">
+        <label for="description">Notes: </label>
+        <textarea type="text" name="note1" ></textarea>
+    </div>
+    <div class="form-pair">
+        <button type="submit" class="btn btn-default" id="report_submit_btn">Submit</button>
+    </div>
+</form>
 
 
 </body>
 
-<footer> 
+<footer>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/createreport.js" ></script>
 
 </html>
+

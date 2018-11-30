@@ -2,6 +2,7 @@ function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
         vars[key] = value;
+
     });
     return vars;
 }
@@ -18,8 +19,35 @@ $.ajax({
         console.log("result recieved from server is : ");
         console.log(data);
         $(".parkname").text(data.currname);
+        return parknum;
+
     },
     error : function(xhr, status, error) {
         alert("An AJAX error occured " + status + " Error " + error);
     }
+
+});
+
+
+//submit report to the database
+$('#create-report-form').submit(function(e){
+    e.preventDefault();
+    var a = $(this).serializeArray();
+    a.push({ name: "parknum", value: parknum});
+    //console.log(a);
+    a = a.filter(function(item){return item.value != '';});
+
+    $.ajax({
+        url: 'api/createreport',
+        type: 'POST',
+        dataType: 'json',
+        data: a,
+        success: function() {
+            window.alert("The report is successfully submitted!");
+            $("#create_report_form").trigger("reset"); //needs fixing
+        },
+        error: function(xhr, status, error) {
+            alert("Status test24: " + status + "\nError: " + error);
+        }
+    });
 });

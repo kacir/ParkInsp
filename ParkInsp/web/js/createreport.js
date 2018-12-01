@@ -40,11 +40,11 @@ $('#create-report-form').submit(function(e){
     $.ajax({
         url: 'api/createreport',
         type: 'POST',
-        dataType: 'json',
         data: a,
         success: function() {
-            window.alert("The report is successfully submitted!");
-            $("#create_report_form").trigger("reset"); //needs fixing
+            $(document).ready(function() {
+                new $.Zebra_Dialog("The report is successfully submitted!");
+            });
         },
         error: function(xhr, status, error) {
             alert("Status test24: " + status + "\nError: " + error);

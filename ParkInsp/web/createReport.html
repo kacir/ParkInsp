@@ -6,7 +6,7 @@
     <title>Create Report</title>
 
     <link rel='shortcut icon' type='image/x-icon' href='img/Arkansas.ico' />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zebra_dialog@latest/dist/css/flat/zebra_dialog.min.css">
     <link rel="stylesheet" href="css/style.css"/>
 
 </head>
@@ -58,7 +58,7 @@
         <textarea type="text" name="note1" ></textarea>
     </div>
     <div class="form-pair">
-        <button type="submit" class="btn btn-default" id="report_submit_btn">Submit</button>
+        <button type="submit" class="btn btn-default" id="report_submit_btn" onclick="this.form.reset();">Submit</button>
     </div>
 </form>
 
@@ -69,6 +69,8 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/zebra_dialog@1.4.0/dist/zebra_dialog.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/createreport.js" ></script>
 
 </html>

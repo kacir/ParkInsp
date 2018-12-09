@@ -3,7 +3,7 @@
 h1 {
     text-align: center;
     margin: 0px;
-	padding-top: 5px;
+    padding-top: 5px;
     padding-bottom: 5px;
     color: white;
 }
@@ -15,7 +15,7 @@ h1 {
 
     margin-left: auto;
     margin-right: auto;
-    
+
     border-width: 1px;
     border-color: black;
     border-style: solid;
@@ -27,12 +27,13 @@ body {
 }
 
 button {
-    background-color: rgb(162, 154, 255);
+    background-color: rebeccapurple;
     font-size: 20px;
+    padding: 5px;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
 }
-
-
-
 
 form {
     margin-left: auto;
@@ -45,47 +46,75 @@ form {
     width :100%;
 }
 
-th {
-	background-color: rgb(85, 178, 61);
+/* popup window */
+
+tbody {
+    border-radius: 5px;
+    padding: 5px;
 }
 
-td, th {
-	border-width: 1px;
+/* popup window header */
+
+/* default popup common style */
+
+tr {
+    border-radius: 5px;
+}
+
+th, td {
+    border-radius: 5px;
+    border-width: 1px;
     border-color: black;
     border-style: solid;
-	text-align: center;
-	
-	padding: 5px;
-	padding-left: 7px;
-	padding-right: 7px;
-	
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
+/* popup header: small padding to set off the title */
+
+th {
+    background-color: rgb(73, 157, 54);
+    padding: 2px;
+    color: white;
+
+}
+
+/* popup item - bigger padding so you can click easier */
+
+td {
+    padding: 10px;
+
+}
+
+/* customize default leaflet popups to make corners nicer */
+
 .leaflet-popup-content {
-	margin: 0px;
+    margin: 0px;
+    border-radius: 5px;
 }
 
 .leaflet-popup-content-wrapper {
-	padding: 0px;
+    border-radius: 5px;
 }
 
 .leaflet-container a.leaflet-popup-close-button {
-	color: black;
+    color: black;
 }
 
 .leaflet-container a.leaflet-popup-close-button:hover {
-	color: red;
+    color: red;
 }
-
 
 
 /*Content that appies to past reports page only*/
 .past-report-content {
-	background-color: rgb(205, 225, 198);
+    background-color: rgb(205, 225, 198);
 }
 
 .ui-state-default{
-	background-color: rgb(205, 225, 198);
+    background-color: rgb(205, 225, 198);
 }
 
 
@@ -96,7 +125,6 @@ label, div {
     margin:auto;
     text-align: left;
 }
-
 
 textarea {
     width: 100%;

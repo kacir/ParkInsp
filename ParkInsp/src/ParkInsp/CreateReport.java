@@ -49,7 +49,6 @@ public class CreateReport extends javax.servlet.http.HttpServlet {
         String datacorr = request.getParameter("datacorr");
         String maint = request.getParameter("maint");
         String public_acc = request.getParameter("public_acc");
-        String notetype = request.getParameter("notetype");
         String note1 = request.getParameter("note1");
         if (parknum != null) {parknum = "'" + parknum + "'";}
         if (inspector != null) {inspector = "'" + inspector + "'";}
@@ -59,11 +58,10 @@ public class CreateReport extends javax.servlet.http.HttpServlet {
         if (datacorr != null) {datacorr = "'" + datacorr + "'";}
         if (maint != null) {maint = "'" + maint + "'";}
         if (public_acc != null) {public_acc = "'" + public_acc + "'";}
-        if (notetype != null) {notetype = "'" + notetype + "'";}
 
         sql = "insert into inspectionnotes (parknum, inspector, inspdate, conversion, datacorr, maint, " +
-                "public_acc, notetype, note1) values (" + parknum + "," + inspector + "," + inspdate
-                + "," + conversion + "," + datacorr + "," + maint + "," + public_acc + "," + notetype + "," + note1 + ")";
+                "public_acc, note1) values (" + parknum + "," + inspector + "," + inspdate
+                + "," + conversion + "," + datacorr + "," + maint + "," + public_acc + "," + note1 + ")";
         System.out.println(sql);
         dbutil.modifyDB(sql);
 

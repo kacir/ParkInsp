@@ -60,7 +60,7 @@ function successCallback(reports) {
                 .attr("class", "past-report-content");
 
             sectionDIV.append("p")
-                .text("Inspector Name :")
+                .text("Inspector Name: ")
                 .append("span")
                 .text(report.inspector);
 

@@ -60,12 +60,15 @@ function successCallback(reports) {
                 .attr("class", "past-report-content");
 
             sectionDIV.append("p")
+                .style("font-weight","bold")
                 .text("Inspector Name: ")
                 .append("span")
+                .style("font-weight","normal")
                 .text(report.inspector);
 
             var conversionCheck = sectionDIV.append("p")
-                .text("Possible conversion: ")
+                .style("font-weight","bold")
+                .text("Possible Conversion: ")
                 .append("input")
                 .attr("type", "checkbox")
                 .attr("disabled", "true");
@@ -75,6 +78,7 @@ function successCallback(reports) {
             }
 
             var dataCorrCheck = sectionDIV.append("p")
+                .style("font-weight","bold")
                 .text("Data Correction: ")
                 .append("input")
                 .attr("type", "checkbox")
@@ -85,6 +89,7 @@ function successCallback(reports) {
             }
 
             var maintCheck = sectionDIV.append("p")
+                .style("font-weight","bold")
                 .text("Maintenance Issue: ")
                 .append("input")
                 .attr("type", "checkbox")
@@ -95,6 +100,7 @@ function successCallback(reports) {
             }
 
             var public_accCheck = sectionDIV.append("p")
+                .style("font-weight","bold")
                 .text("Public Access Issue: ")
                 .append("input")
                 .attr("type", "checkbox")
@@ -106,8 +112,10 @@ function successCallback(reports) {
             }
 
             sectionDIV.append("p")
+                .style("font-weight","bold")
                 .text("Notes: ")
                 .append("span")
+                .style("font-weight","normal")
                 .text(report.note1);
 
         });

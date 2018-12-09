@@ -117,7 +117,15 @@ td {
     background-color: rgb(205, 225, 198);
 }
 
+.ui-state-default:hover{
+    background-color: rgb(232, 255, 224);
+}
 
+.ui-state-active{
+    font-weight: bold;
+    color: black;
+    background-color: rgb(186, 204, 180);
+}
 
 
 /*content that appied to the create new report page*/

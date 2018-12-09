@@ -20,11 +20,11 @@
 <form id="create-report-form">
     <div class="form-pair">
         <label for="name">Name:</label>
-        <input placeholder="Please enter your name" type="text" name="inspector" />
+        <input placeholder="Please enter your name" type="text" name="inspector" required/>
     </div>
     <div class="form-pair">
         <label for="date">Date:</label>
-        <input placeholder="MM/DD/YYYY" type="text" name="inspdate" />
+        <input placeholder="MM/DD/YYYY" type="text" name="inspdate" required/>
     </div>
     <div class="form-pair">
         <label for="conversion">Possible conversion:</label>
@@ -43,7 +43,7 @@
     </div>
     <div class="form-pair">
         <label for="description">Notes: </label>
-        <textarea type="text" name="note1" ></textarea>
+        <textarea type="text" name="note1" required></textarea>
     </div>
     <div class="form-pair">
         <button type="submit" class="btn btn-default" id="report_submit_btn">Submit</button>

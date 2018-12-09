@@ -155,3 +155,12 @@ form div button {
 form {
     padding-top: 10px;
 }
+
+/* add underline to link only on hover */
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}

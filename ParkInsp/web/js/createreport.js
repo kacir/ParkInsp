@@ -42,6 +42,8 @@ $('#create-report-form').submit(function(e){
         type: 'POST',
         data: a,
         success: function() {
+            $('input[type="text"],textarea').val('');
+            $('input[type="checkbox"]').prop('checked', false);
             $(document).ready(function() {
                 new $.Zebra_Dialog("The report is successfully submitted!");
             });

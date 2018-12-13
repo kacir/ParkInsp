@@ -43,7 +43,7 @@ public class ViewPast extends javax.servlet.http.HttpServlet {
 
         String parknum = request.getParameter("parknum");
 
-        String sql = "select inspector, inspdate, conversion, dataCorr, maint, public_acc, notetype, note1" +
+        String sql = "select inspector, inspdate, conversion, dataCorr, maint, public_acc, note1" +
                 " from inspectionnotes where inspectionnotes.parknum = '" + parknum + "'";
 
         ResultSet res = dbutil.queryDB(sql);
@@ -58,7 +58,6 @@ public class ViewPast extends javax.servlet.http.HttpServlet {
                 m.put("dataCorr", res.getString("dataCorr"));
                 m.put("maint", res.getString("maint"));
                 m.put("public_acc", res.getString("public_acc"));
-                m.put("notetype", res.getString("notetype"));
                 list.put(m);
             }
         }catch (SQLException e){

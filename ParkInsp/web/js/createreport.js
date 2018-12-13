@@ -23,7 +23,7 @@ $.ajax({
 
     },
     error : function(xhr, status, error) {
-        alert("An AJAX error occured " + status + " Error " + error);
+        alert("An AJAX error occurred " + status + " Error " + error);
     }
 
 });
@@ -37,6 +37,8 @@ $('#create-report-form').submit(function(e){
     //console.log(a);
     a = a.filter(function(item){return item.value != '';});
 
+    console.log(a);
+
     $.ajax({
         url: 'api/createreport',
         type: 'POST',
@@ -45,7 +47,7 @@ $('#create-report-form').submit(function(e){
             $('input[type="text"],textarea').val('');
             $('input[type="checkbox"]').prop('checked', false);
             $(document).ready(function() {
-                new $.Zebra_Dialog("The report is successfully submitted!");
+                alert("The report is successfully submitted!");
             });
         },
         error: function(xhr, status, error) {

@@ -22,9 +22,9 @@ mymap.setView([ 34.7517595, -92.329416], 8);
 
 
 var viewpastlink = $("#viewpastlink");
-viewpastlink.attr("href" , viewpastlink.attr("href") + "?&parknum=" + parknum);
+viewpastlink.attr("href" , viewpastlink.attr("href") + "?parknum=" + parknum);
 var createreport = $("#createReportLink");
-createreport.attr("href" , createreport.attr("href") + "?&parknum=" + parknum);
+createreport.attr("href" , createreport.attr("href") + "?parknum=" + parknum);
 
 
 

@@ -35,6 +35,8 @@ public class ParkName extends HttpServlet {
 
         try {
             res.next();
+            System.out.println(res.getString("currname"));
+
             outputJSON.put("currname" ,res.getString("currname"));
 
         } catch (SQLException e) {

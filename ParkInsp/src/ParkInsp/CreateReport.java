@@ -35,6 +35,8 @@ public class CreateReport extends javax.servlet.http.HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse
             response) throws ServletException, IOException {
+        System.out.println("Request to create report has been successfully received");
+
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 

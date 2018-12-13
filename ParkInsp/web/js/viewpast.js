@@ -41,10 +41,13 @@ $(document).ready(function(){
 });
 
 function successCallback(reports) {
+
+
     //activate the accordion ui feature through jquery UI module
     $( function() {
         $( "#accordion" ).accordion();
     } );
+
     var accordionElement = d3.select("#accordion");
 
 
@@ -121,10 +124,11 @@ function successCallback(reports) {
         });
     } else if (reports.length < 1){
         $(document).ready(function() {
-            new $.Zebra_Dialog('No prior inspections exist for this park.');
+            alert('No prior inspections exist for this park.');
             setTimeout(function(){
                 window.location.href = 'index.html'
             },3000); // milliseconds
         });
     }
+
 }
